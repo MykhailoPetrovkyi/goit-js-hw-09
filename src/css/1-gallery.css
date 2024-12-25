@@ -1,0 +1,35 @@
+@import url(./style.css);
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1128px;
+  margin: 0 auto;
+}
+
+.gallery-image {
+  max-width: 360px;
+  transition: 0.5s;
+}
+
+.gallery-image:hover {
+  transform: scale(104%);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.sl-wrapper {
+  background-color: rgba(46, 47, 66, 80%);
+}
+.sl-wrapper .sl-counter {
+  color: #ffffff !important;
+}
+.sl-wrapper .sl-close {
+  color: #ffffff !important;
+}
+.sl-wrapper .sl-navigation button.sl-next {
+  color: #ffffff;
+}
+.sl-wrapper .sl-navigation button.sl-prev {
+  color: #ffffff;
+}
