@@ -34,6 +34,8 @@ form.addEventListener('submit', event => {
   event.preventDefault();
   console.log(formData);
   if (formData.email !== '' && formData.message !== '') {
+    formData.email = '';
+    formData.message = '';
     event.currentTarget.reset();
     localStorage.removeItem('feedback-form-state');
   } else {
