@@ -25,20 +25,19 @@ const fillFormData = () => {
 
 fillFormData();
 
-form.addEventListener('change', event => {
+form.addEventListener('input', event => {
   formData[event.target.name] = event.target.value.trim();
   localStorage.setItem('feedback-form-state', JSON.stringify(formData));
 });
 
 form.addEventListener('submit', event => {
   event.preventDefault();
-  console.log(formData);
   if (formData.email !== '' && formData.message !== '') {
+    console.log(formData);
     event.currentTarget.reset();
     localStorage.removeItem('feedback-form-state');
-    formData.email = '';
-    formData.message = '';
   } else {
     alert('Fill please all fields');
   }
+  formData = { email: '', message: '' };
 });
