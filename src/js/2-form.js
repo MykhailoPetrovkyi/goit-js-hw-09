@@ -7,11 +7,11 @@ let formData = {
 
 const fillFormData = () => {
   try {
-    if (localStorage.length === 0) {
+    const dataLocale = JSON.parse(localStorage.getItem('feedback-form-state'));
+
+    if (dataLocale === null) {
       return;
     }
-
-    const dataLocale = JSON.parse(localStorage.getItem('feedback-form-state'));
 
     formData = dataLocale;
 
